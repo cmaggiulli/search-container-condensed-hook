@@ -35,7 +35,7 @@ cobertura.ser
 /release.*.properties
 /svn-revision
 /test.*.properties
-/WEB-INF
+
 
 /benchmarks/*.csv
 /benchmarks/*.sql
