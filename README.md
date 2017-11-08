@@ -1,10 +1,16 @@
 # search-container-condensed-hook
-#### A Liferay 6.2 SearchContainer and Bootstrap table-condense Hook
+*A Liferay 6.2 taglib jsp hook that condenses all Search Containers*
 
 ### About
-This Liferay hook is written for Liferay 6.2.x EE and CE.  It is not compatible with Liferay 7 and is not necessary in Liferay 6.1. The goal of this hook is to condense Liferay's SearchContainer to a size more akin to the container in 6.1 in a well architected and efficient manner.  It applies the Bootstraps table-condensed class to all search containers in the portal.  The hook overrides the **html/taglib/ui/search_iterator/page.jsp** file and can be hot deployed.  Included in this hook is the Ant build script, all necessary XML configurations, and dependencies.
+This hook makes all Liferay search container tables condensed (bootstrap's table-condensed).  The look and size
+of the search container should be closer to the Liferay 6.1.  The hook uses Liferay's recommend override functionaliy
+meaning that it does not modify the actual source code of the search container JSP but rather loads that page
+via a buffer tag and then replaces the **table-striped** style with **table-striped table-condensed**.
+
+
+### Compatibility
+This hook is compatible with Liferay 6.2 GA1 through GA6 community and enterprise.  It is not compatible with 
+Liferay 6.1 or Liferay DXP/7.
 
 ### Build and Deploy
-To build this hook clone a copy to your ${plugins.sdk}/hook folder.  Open the project in Liferay IDE or Developer Studio (both Eclipse based IDE's) and run the all target in the Ant build file.  Conversely you could simply run that target from the command line.  Grab the generated **.war** file from your ${plugins.sdk}/dist to ${liferay.home}/deploy folder.  The hook is hot deployable. 
-
-
+To build this hook clone a copy to your `${plugins.sdk}/hook` folder.  Run the `ant compile` and `ant direct-deploy` targets.
