@@ -19,7 +19,7 @@ This repository contains a lightweight [Hook](https://help.liferay.com/hc/en-us/
   
 This Hook's only change is that it applies, by default, the table-condensed class to the underline table element resulting from the implementation of the `<liferay-ui:search-container>` Scriplet.
 
-### Build and Deploy
+## Ant Build Instructions
 To build this plugin run the following commands:
 
     git clone --depth 1 git@github.com:cmaggiulli/search-container-condensed-hook.git ~/search-container-condensed-hook
